@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+/*Definitivo*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+/*elimina barra orizzontale*/
+
+.container, header, .chiSono, .competenze, .development, .progetti{
+  display: flex;
+  width:  100%;
+  max-width:  100%;
+}
+
+.contatti, .validazione{
+  display: flex;
+}
+
+.container{
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+header{
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 2;
+  background-color: #303841;
+  background-size: cover;
+  min-height: 100vh;
+
+}
+
+#profilo{
+  border-radius: 50%;
+  border: 5px solid #425e78;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contatti{
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 5px;
+  border: 5px solid #425e78;
+  background-color: #fff;
+  padding: 20px;
+  margin: 30px;
+}
+
+.contatti > p{
+  color: #000;
+}
+
+.icon{
+  height: 32px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.rotazione{
+  border-top: 50px solid #407F8C;
+  border-right: 50px solid #407F8C;
+  transform: rotate(5deg);
+  background-color: #407F8C;
+  position: relative;
+}
+
+.chiSono{
+  justify-content: flex-start;
+  min-height: 250px;
+  top: -80px;
+  z-index: 1;
+}
+
+.rotazioneInversa{
+  transform: rotate(-5deg);
+  margin: 50px;
+  width: 80%;
+  max-width: 80%;
+}
+
+.competenze, .progetti{
+  flex-direction: column;
+  position: relative;
+}
+
+.competenze{
+  align-items: center;
+  min-height: 250px;
+  top: -150px;
+  padding-top: 50px;
+  background-color: #3a4750;
+}
+
+.competenze>article{
+  margin: 20px;
+}
+
+.development{
+  justify-content: space-around;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.web{
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+}
+
+.progetti{
+  background-color: #407F8C;
+  min-height: 150px;
+  padding-top: 2%;
+  padding-left: 2%;
+  top: -150px;
+}
+
+.coming-soon{
+  position: relative;
+  top: -100px;
+  font-family: 'Lobster', sans-serif;
+  font-size: 3em;
+  text-shadow: 3px 3px #000;
+  max-width: 100%;
+  margin: 0px 10%;
+}
+
+.validazione{
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/*TYPOGRAPHY*/
+h1,h2,h4{
+  font-family: 'Lobster', sans-serif;
+  margin-bottom: 10px;
+}
+
+h1{
+  color: #fd9426;
+  text-shadow: 3px 3px #000;
+}
+
+h2, h4{
+  color: #e0e0e0;
+  text-shadow: 2px 2px #000;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('../images/red-background.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+p,ul, dl{
+  margin-left: 10px;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+dt{
+  font-weight: 800;
+}
+dd{
+  margin-left: 20px;
+}
+
+ul{
+  margin: 10px 50px;
+}
+
+a:link{
+  color: #ff3333;
+}
+
+a:active{
+  color: #b30000;
+}
+
+a:visited{
+  color: orange;
+}
+
+a:hover{
+  color: #990000;
+}
+
+a{
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 451px){
+
+  .competenze{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .development{
+    flex-direction: column;
+    z-index: 1;
+    order: 1;
+    width: 40vw;
+    margin-right: 30px;
+    position: relative;
+    top: -40px;
+  }
+
+  .web{
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  /*usato anche se per pochi elementi perchè in futuro potrebbero essere riutilizzati più ampiamente*/
+  .right{
+    align-self: flex-end;
+  }
+
+  .left{
+    align-self: flex-start;
+  }
+
+}
